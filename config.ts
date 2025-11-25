@@ -5,7 +5,7 @@ export const radioConfig: RadioConfig = {
   tagline: "Le Rythme de Votre Vie",
   // Demo stream URL (Change this to your actual stream URL)
   streamUrl: "https://a8.asurahosting.com:8440/radio.mp3", 
-  logoUrl: "https://photos.google.com/photo/AF1QipM3eZGPT5ozk5ukzMdzgGZxAIUnvuJOoJ6kfPuG", // Placeholder logo
+  logoUrl: "https://drive.google.com/file/d/1MqKLYC0G3MJIKcLprstS_WFi7m1WkHWs/view?usp=drive_link", // Placeholder logo
   themeColor: "#3b82f6", // Blue-500
   socials: [
     { platform: 'facebook', url: 'https://facebook.com/profile.php?id=61571862830361' },
