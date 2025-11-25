@@ -10,7 +10,7 @@ const AudioVisualizer: React.FC<AudioVisualizerProps> = ({ isPlaying }) => {
       {[...Array(10)].map((_, i) => (
         <div
           key={i}
-          className={`w-1.5 bg-blue-500 rounded-full transition-all duration-300 ease-in-out ${
+          className={`w-1.5 bg-emerald-500 rounded-full transition-all duration-300 ease-in-out ${
             isPlaying ? 'animate-[bounce_1s_infinite]' : 'h-1 opacity-30'
           }`}
           style={{

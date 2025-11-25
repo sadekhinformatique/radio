@@ -61,15 +61,12 @@ const Controls: React.FC<ControlsProps> = ({ config, isPlaying, setIsPlaying }) 
 
     if (isPlaying) {
       audioRef.current.pause();
-      // For live streams, it's often better to reset src to avoid playing stale buffer
-      // but for simple paused state, pause() is fine.
       setIsPlaying(false);
     } else {
       setIsLoading(true);
       setError(null);
       try {
         await audioRef.current.play();
-        // State update handled by event listener
       } catch (err) {
         console.error("Playback failed", err);
         setIsLoading(false);
@@ -104,9 +101,9 @@ const Controls: React.FC<ControlsProps> = ({ config, isPlaying, setIsPlaying }) 
           onClick={togglePlay}
           className={`
             relative flex items-center justify-center w-20 h-20 rounded-full 
-            bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-xl 
-            transition-all duration-300 hover:scale-105 hover:shadow-blue-500/25 active:scale-95
-            ${isPlaying ? 'ring-4 ring-blue-500/30' : ''}
+            bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-xl 
+            transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/25 active:scale-95
+            ${isPlaying ? 'ring-4 ring-emerald-500/30' : ''}
           `}
           aria-label={isPlaying ? "Pause Radio" : "Play Radio"}
         >
@@ -136,7 +133,7 @@ const Controls: React.FC<ControlsProps> = ({ config, isPlaying, setIsPlaying }) 
           step="0.01"
           value={isMuted ? 0 : volume}
           onChange={handleVolumeChange}
-          className="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500 hover:accent-blue-400"
+          className="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500 hover:accent-emerald-400"
         />
       </div>
     </div>

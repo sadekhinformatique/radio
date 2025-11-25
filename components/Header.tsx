@@ -12,12 +12,16 @@ const Header: React.FC<HeaderProps> = ({ config, isPlaying }) => {
     <div className="flex flex-col items-center justify-center space-y-6 mb-8">
       {/* Logo Container with Glow Effect */}
       <div className="relative group">
-        <div className={`absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-25 transition duration-1000 group-hover:opacity-50 ${isPlaying ? 'opacity-60 animate-pulse-slow' : ''}`}></div>
+        <div className={`absolute -inset-1 bg-gradient-to-r from-emerald-600 to-green-600 rounded-full blur opacity-25 transition duration-1000 group-hover:opacity-50 ${isPlaying ? 'opacity-60 animate-pulse-slow' : ''}`}></div>
         <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl bg-slate-900 flex items-center justify-center">
             <img 
                 src={config.logoUrl} 
                 alt={`${config.stationName} Logo`} 
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                onError={(e) => {
+                  // Fallback if logo.png is missing
+                  (e.target as HTMLImageElement).src = `https://placehold.co/400x400/065f46/ffffff?text=${encodeURIComponent(config.stationName)}`;
+                }}
             />
         </div>
       </div>
@@ -27,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ config, isPlaying }) => {
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
           {config.stationName}
         </h1>
-        <p className="text-slate-400 font-medium tracking-wide uppercase text-xs sm:text-sm">
+        <p className="text-emerald-400/80 font-medium tracking-wide uppercase text-xs sm:text-sm">
           {config.tagline}
         </p>
       </div>
