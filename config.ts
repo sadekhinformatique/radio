@@ -6,7 +6,7 @@ export const radioConfig: RadioConfig = {
   // URL du flux (Remplacez par votre lien de streaming réel)
   streamUrl: "https://a8.asurahosting.com:8440/radio.mp3", 
   // Placez votre image 'logo.png' à la racine du site
-  logoUrl: "./logo.png", 
+  logoUrl: "logo.png", 
   themeColor: "#008000", // Emerald-500
   socials: [
     { platform: 'facebook', url: 'https://facebook.com/profile.php?id=61571862830361' },
