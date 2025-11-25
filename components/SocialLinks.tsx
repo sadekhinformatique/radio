@@ -1,6 +1,6 @@
 import React from 'react';
 import { SocialLink } from '../types';
-import { Facebook, Twitter, Instagram, Globe, Youtube, Phone } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Globe, Youtube, Phone, Music2 } from 'lucide-react';
 
 interface SocialLinksProps {
   links: SocialLink[];
@@ -8,12 +8,14 @@ interface SocialLinksProps {
 
 const SocialLinks: React.FC<SocialLinksProps> = ({ links }) => {
   const getIcon = (platform: string) => {
-    switch (platform) {
+    switch (platform.toLowerCase()) {
       case 'facebook': return <Facebook className="w-5 h-5" />;
-      case 'twitter': return <Twitter className="w-5 h-5" />;
+      case 'twitter': 
+      case 'x': return <Twitter className="w-5 h-5" />;
       case 'instagram': return <Instagram className="w-5 h-5" />;
       case 'whatsapp': return <Phone className="w-5 h-5" />;
       case 'youtube': return <Youtube className="w-5 h-5" />;
+      case 'tiktok': return <Music2 className="w-5 h-5" />;
       default: return <Globe className="w-5 h-5" />;
     }
   };
