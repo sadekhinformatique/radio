@@ -4,7 +4,7 @@ export const radioConfig: RadioConfig = {
   stationName: "Radio IQRA",
   tagline: "La Voix du Saint Coran - 96.1 MHz",
   // URL du flux (Remplacez par votre lien de streaming réel)
-  streamUrl: "https://a8.asurahosting.com:8440/radio.mp3", 
+  streamUrl: "https://a9.asurahosting.com/listen/radio_iqra_bf/radio.mp3", 
   // Placez votre image 'logo.png' à la racine du site
   logoUrl: "logo.png", 
   themeColor: "#008000", // Emerald-500
