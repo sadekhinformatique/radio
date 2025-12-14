@@ -4,7 +4,7 @@ export const radioConfig: RadioConfig = {
   stationName: "Radio IQRA",
   tagline: "La Voix du Saint Coran - 96.1 MHz",
   // URL du flux (Remplacez par votre lien de streaming réel)
-  streamUrl: "https://stream.zeno.fm/ztmkyozjspltv", 
+  streamUrl: "https://stream.zeno.fm/ztmkyozjspltv.m3u", 
   // Placez votre image 'logo.png' à la racine du site
   logoUrl: "logo.png", 
   themeColor: "#008000", // Emerald-500
